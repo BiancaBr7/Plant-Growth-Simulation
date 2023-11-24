@@ -80,31 +80,3 @@ for T in range(25):
     heat(num_map,f"Num_{(T+1)*15}")
     
 print(area)
-
-import matplotlib.pyplot as plt
-import numpy as np
-import math
-
-data = np.array(area)
-data2 = []
-
-
-
-for i in range(24):
-    if i<=14:
-        y = (((2*i/3-2/3) * 10)**2)
-        data2.append(y)
-    else:
-        data2.append((((2*14/3-2/3) * 10)**2))
-data2=np.array(data2)
-
-plt.plot(data,label="data1")
-
-plt.xlabel('Index')
-plt.ylabel('Values')
-
-plt.plot(data2,label="data2")
-plt.xlabel('Index')
-plt.ylabel('Values')
-
-plt.show()
